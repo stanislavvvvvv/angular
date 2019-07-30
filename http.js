@@ -51,4 +51,7 @@ function getArrayFronObject(obj){
     valores.push(valor)
   }
   return valores
-}
+} 
+
+
+//promessaaaasssss

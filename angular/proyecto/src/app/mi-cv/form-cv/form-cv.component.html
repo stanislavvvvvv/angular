@@ -1,0 +1,11 @@
+<form class="mi-form">
+  Nombre: <input type="text" placeholder="Nombre" [(ngModel)]="nombre" 
+                 name="nombre" (input)="cambiarNombre($event)"><br>
+  Apellido: <input type="text" placeholder="Apellido" [(ngModel)]="apellido" 
+                    name="apellido" (input)="cambiarApellido($event)"><br>
+  Email: <input type="email" placeholder="Email" [(ngModel)]="email" name="email"
+              (input)="cambiarEmail($event)"><br>
+  Skills: <input type="text" name="skill" placeholder="Skills" [(ngModel)]="skill"><br>
+  <br>
+  <button type="button" (click)="anadirSkill()">Añadir skill</button>
+</form>

@@ -1,0 +1,37 @@
+<h2>DIRECTIVAS</h2>
+<h3>De atributo</h3>
+
+<input type="text" [(ngModel)]="color">
+<p [ngStyle]="{'color' : color,
+              'text-decoration': 'line-through'}">Texto azul y tachado</p>
+<p [ngClass]="{'negrita': true,
+              'letra-amarilla': true}">Texto amarillo y negrita</p>
+<input type="checkbox" (change)="negrita = !negrita">
+
+<p appMarcada='red'>ajajajajajajja</p>
+
+
+
+<h3>Estructurales</h3>
+<!-- añade nuevas etiquetas -->
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
+<button type="button" (click)="toggleMostrarItem()">DAME</button>
+<p *ngIf="mostrarItem; else else2" appBlink='blue'>blinblinkblink</p>
+<ng-template #else2>
+  <p  appMarcada>amrcadismo(ELSE)  </p>
+</ng-template>
+
+
+<div [ngSwitch]="color">
+  <p *ngSwitchCase="'black'">
+    es de color negro
+  </p>
+  <p *ngSwitchCase="'red'">
+    es de color rojo
+  </p>
+  <p *ngSwitchDefault>
+    color defaulto
+  </p>
+</div>

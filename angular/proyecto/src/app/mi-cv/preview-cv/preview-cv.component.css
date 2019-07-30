@@ -1,0 +1,11 @@
+.mi-form{
+  width: 500px;
+  border: 2px solid rgb(8, 68, 199);
+  box-shadow: 10px 5px 20px rgb(34, 76, 153);
+  /* arriba derecha abajo izquierda */
+  padding: 15px 5px 15px 5px ;
+  margin: 20px; 
+}
+img {
+  width: 500px;
+}

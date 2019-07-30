@@ -1,0 +1,16 @@
+.card{
+  width: 500px;
+  border: 2px solid chocolate;
+  box-shadow: 10px 5px 20px red;
+  /* arriba derecha abajo izquierda */
+  padding: 15px 5px 15px 5px ;
+  margin: 20px;
+}
+
+h, button,p{
+  margin: 20px;
+}
+.con-flex{
+  display: flex;
+  justify-content: center;
+}

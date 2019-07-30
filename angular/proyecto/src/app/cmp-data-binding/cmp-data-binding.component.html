@@ -1,0 +1,17 @@
+<h2>Data Binding</h2>
+<h3>String Interpolation</h3>ç
+<p> {{nombre}}{{editando ? '******' : nombre}}</p>
+<h3>Property binding</h3>
+<!-- los cocrchetes evaluan la expresion -->
+  <input type="text" [disabled]="editando">
+<h3>Event binding</h3>
+  <button type="button" (click)="toggleEditando()">Cambiar editando bro({{ editando ? 'deshabilitado' : "ABILITADO" }})</button>
+  <app-cotnador></app-cotnador>
+<h3>two-way binding</h3>
+  <input type="text" [(ngModel)]="nombre">
+  <button type="button" (click)="resetNombre()">Reset Nombre</button>
+  <input type="text" (input)="cambiarNombre($event)" [value]="nombre">
+<h3>referencias</h3>
+<!-- referencia a una etiquieta input -->
+  <input type="text" #inputRef>
+  <button type="button" (click)="mostrar(inputRef)">Mostrar inputRef</button>

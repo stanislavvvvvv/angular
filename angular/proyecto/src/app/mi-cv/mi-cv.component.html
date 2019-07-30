@@ -1,0 +1,9 @@
+<app-form-cv (evento)="agregarSkill($event)" 
+            (evento)="cambiarNombre($event)"
+            (evento)="cambiarApellido($event)"
+            (evento)="cambiarEmail($event)"></app-form-cv>
+<app-preview-cv [nombre]="nombre"
+                [apellido]="apellido"
+                [email]="email"
+                [skills]="skills"
+                [foto]="foto"></app-preview-cv>

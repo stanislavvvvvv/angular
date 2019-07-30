@@ -1,0 +1,16 @@
+<p>cmp-comunicacion-entre-cmps works!</p>
+<p>Me llamo ANAKIN</p>
+<p>Mi hijo se llama {{nombreLuke}}</p>
+<p>Mi hija se llama {{nombreLeia}}</p>
+<input type="text" [(ngModel)]="nombreLeia">
+<input type="text" [(ngModel)]="nombreLuke">
+<hr>
+<app-cmp-leia [miNombre]="nombreLeia" 
+              [nombreHermano]="nombreLuke" 
+              (nombreCambiado)="cambiarNombreLeia($event)">
+
+</app-cmp-leia>
+
+
+<hr>
+<app-cmp-luke [miNombre]="nombreLuke"></app-cmp-luke>

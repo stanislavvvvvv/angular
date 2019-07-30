@@ -1,0 +1,9 @@
+<div class="mi-form">
+  <h1>CV de {{nombre}} {{apellido}}</h1>
+  FOTICO: <img [src]="foto" >
+  <h1>Email: {{email}}</h1>
+  <h1>Skills: </h1>
+    <ul *ngFor="let item of skills">
+        <li>{{item}}</li>
+    </ul>
+</div>

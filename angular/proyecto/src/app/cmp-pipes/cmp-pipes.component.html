@@ -1,0 +1,22 @@
+<h2>PIPAS</h2>>
+<div>
+  <h3>{{nombreProducto}}</h3>
+  <h3>{{descripcionProducto}}</h3>
+  <h3>{{precio | doble:5 | currency: 'EUR'}}</h3>
+  <h3>{{fechaCompra | date:'dd/mm/yyyy'}}</h3>
+  <h3>{{nombreProducto | reverse }}</h3>
+  <h3>{{precio | currency: 'EUR' | currencyRight}}</h3>
+  <h3>{{descripcionProducto | hideWords: ['auriculares','mierda','uta']}}</h3>
+</div>
+<input type="text" placeholder="Filtro" (input)="txtFiltro = $event.target.value">
+<input type="text" placeholder="Nueva Mascota" #inputMascota>
+
+<button type="button" (click)="addMascota(inputMascota.value)">Añadir</button>
+<ul>
+  <li *ngFor="let item of mascotas">{{item}}</li>
+</ul>
+<ul>
+  <li *ngFor="let item of mascotas | filtro: txtFiltro">{{item}}</li>
+</ul>
+
+<p>{{msg | async}}</p>

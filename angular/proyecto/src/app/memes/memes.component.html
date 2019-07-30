@@ -1,0 +1,22 @@
+<app-generador (propCvCambiada)="cambiardatos($event)"
+          [color]="memeactual.color"
+          [textoArriba]="memeactual.textoArriba"
+          [textoAbajo]="memeactual.textoAbajo" 
+          [imagenUrl]="memeactual.imagenUrl"
+          [isFav]="memeactual.isFav"></app-generador>
+<app-vista [color]="memeactual.color"
+          [textoArriba]="memeactual.textoArriba"
+          [textoAbajo]="memeactual.textoAbajo" 
+          [imagenUrl]="memeactual.imagenUrl"
+          [isFav]="memeactual.isFav"></app-vista>
+<h3>LISTA DE GRACIOSIDASDES ASDJASKLDASKL</h3>
+
+<ul>
+  <li *ngFor="let item of memes">
+      <div class="container">
+          <img [src]="item.imagenUrl" alt="spoja" style="width: 500px;height: 500px;">
+          <div class="top" [ngStyle]="{'color': item.color}">{{item.textoArriba | uppercase}}</div>
+          <div class="bottom" [ngStyle]="{'color': item.color}">{{item.textoAbajo | uppercase}}</div>
+      </div>
+  </li>
+</ul>

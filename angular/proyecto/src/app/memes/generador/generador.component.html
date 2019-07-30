@@ -1,0 +1,24 @@
+<form class="formo" [formGroup]="form" (submit)="enviarMeme(
+  colorName.value,textoArriba.value,textoAbajo.value,
+  imagen.value,favorito.value)">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Color</label>
+        <input type="color" class="form-control" #colorName name="color" [value]="color" (input)="cambiarProp($event)"
+        formControlName="color"> <br>
+    </div>
+    <label>Texto de arriba</label>
+    <input type="text" class="form-control" #textoArriba name="textoArriba" (input)="cambiarProp($event)"
+    formControlName="textoArriba"> <br>
+    <label>Texto de abajo</label>
+    <input type="text"  class="form-control" #textoAbajo name="textoAbajo" (input)="cambiarProp($event)"
+    formControlName="textoAbajo"> <br>
+    <label>URL de la imagen</label>
+    <input type="text" class="form-control" #imagen name="imagenUrl" (input)="cambiarProp($event)"
+    formControlName="imagenUrl"> <br>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-input" #favorito name="isFav" (input)="cambiarProp($event)"
+      formControlName="isFav"> <br>
+      <label class="form-check-label">Es tu favorito o que</label>
+  </div>
+  <button type ="submit" class="btn btn-primary" [disabled]="form.invalid">Añadir</button> <br>
+</form>
